@@ -224,10 +224,51 @@
                                         </div>
                                         <ul class="ul-withdetails">
 
+                                            <!-- MOPO NeurIPS 2025 -->
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-sm-4 col-md-3">
+                                                        <div class="image thumb" style="padding-top: 10px;">
+                                                            <img alt="pspl_teaser" src="images/research/pubs/mopo-teaser.png" class="img-responsive">
+                                                            <div class="imageoverlay">
+                                                                <i class="fa fa-search"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-8 col-md-9" style="margin-top: -10px; margin-left: -30px;">
+                                                        <div class="meta">
+                                                            <h3 style="margin-top: 32px;">Multi-Objective Preference Optimization: Improving Human Alignment of Generative Models                                                       
+                                                            </h3>
+                                                            <p> <strong style="font-weight: 600;">Akhil Agnihotri</strong>, Rahul Jain, Deepak Ramachandran, Zheng Wen. </p>
+                                                            <p style="font-size:14.5px; margin-top: -5px;">
+                                                                Submitted NeurIPS 2025 &nbsp;
+                                                                [<a href="https://arxiv.org/abs/2505.10892" target="_blank">arxiv</a>]
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="details">
+                                                    <p>
+                                                        <strong>Abstract</strong>: Post-training of LLMs with RLHF, and subsequently preference optimization algorithms such as DPO, IPO, etc.,
+                                                         made a big difference in improving human alignment. However, all such techniques can only work with a single (human) objective. 
+                                                         In practice, human users have multiple objectives, such as helpfulness and harmlessness, and there is no natural way to aggregate 
+                                                         them into a single objective. In this paper, we address the multi-objective preference-alignment problem, where a policy must optimize 
+                                                         several, potentially conflicting, objectives. We introduce the Multi-Objective Preference Optimization (MOPO) algorithm, which frames 
+                                                         alignment as a constrained KL-regularized optimization: the primary objective is maximized while secondary objectives are lower-bounded 
+                                                         by tunable safety thresholds. Unlike prior work, MOPO operates directly on pairwise preference data, requires no point-wise reward 
+                                                         assumption, and avoids heuristic prompt-context engineering. The method recovers policies on the Pareto front whenever the front is 
+                                                         attainable; practically, it reduces to simple closed-form iterative updates suitable for large-scale training. On synthetic benchmarks 
+                                                         with diverse canonical preference structures, we show that MOPO approximates the Pareto front. When fine-tuning a 1.3B-parameter 
+                                                         language model on real-world human-preference datasets, MOPO attains higher rewards and yields policies that Pareto-dominate 
+                                                         baselines; ablation studies confirm optimization stability and robustness to hyperparameters.
+                                                    </p>
+                                                    
+                                                </div>
+                                            </li>
 
 
 
-                                            <!-- Trajectory Preference Optimization ICML 2025 -->
+                                            <!-- Trajectory Preference Optimization NeurIPS 2025 -->
                                             <li>
                                                 <div class="row">
                                                     <div class="col-sm-4 col-md-3">
@@ -240,11 +281,11 @@
                                                     </div>
                                                     <div class="col-sm-8 col-md-9" style="margin-top: -10px; margin-left: -30px;">
                                                         <div class="meta">
-                                                            <h3 style="margin-top: 32px;">Best Policy Learning from Trajectory Preference Feedback                                                       
+                                                            <h3 style="margin-top: 32px;">Active RLHF via Best Policy Learning from Trajectory Preference Feedback                                                       
                                                             </h3>
                                                             <p> <strong style="font-weight: 600;">Akhil Agnihotri</strong>, Rahul Jain, Deepak Ramachandran, Zheng Wen. </p>
                                                             <p style="font-size:14.5px; margin-top: -5px;">
-                                                                Submitted ICML 2025 &nbsp;
+                                                                Submitted NeurIPS 2025 &nbsp;
                                                                 [<a href="https://arxiv.org/abs/2501.18873" target="_blank">arxiv</a>]
                                                             </p>
                                                         </div>
@@ -272,7 +313,7 @@
 
 
 
-                                            <!-- Offline Preference Data Bandits ICML 2025 -->
+                                            <!-- Offline Preference Data Bandits NeurIPS 2025 -->
                                             <li>
                                                 <div class="row">
                                                     <div class="col-sm-4 col-md-3">
@@ -285,12 +326,12 @@
                                                     </div>
                                                     <div class="col-sm-8 col-md-9" style="margin-top: -10px; margin-left: -30px;">
                                                         <div class="meta">
-                                                            <h3 style="margin-top: 32px;">Online Bandit Learning with Offline Preference Data                                                       
+                                                            <h3 style="margin-top: 32px;">Online Bandit Learning with Offline Preference Data for Improved RLHF                                                       
                                                             </h3>
                                                             <p> <strong style="font-weight: 600;">Akhil Agnihotri</strong>, Rahul Jain, Deepak Ramachandran, Zheng Wen. </p>
                                                             <p style="font-size:14.5px; margin-top: -5px;">
-                                                                Submitted ICML 2025 &nbsp;
-                                                                [<a href="https://arxiv.org/abs/2406.09574v1" target="_blank">arxiv</a>]
+                                                                Submitted NeurIPS 2025 &nbsp;
+                                                                [<a href="https://arxiv.org/abs/2406.09574" target="_blank">arxiv</a>]
                                                             </p>
                                                         </div>
                                                     </div>
@@ -331,7 +372,7 @@
                                                             <p> <strong style="font-weight: 600;">Akhil Agnihotri</strong>, Rahul Jain, Deepak Ramachandran, Sahil Singla.</p>
                                                             <p style="font-size:14.5px; margin-top: -5px;" >
                                                                 NeurIPS 2024 &nbsp;
-                                                                [<a href="https://arxiv.org/abs/2406.09563v1" target="_blank">arxiv</a>]
+                                                                [<a href="https://arxiv.org/abs/2406.09563" target="_blank">arxiv</a>]
                                                             </p>
                                                         </div>
                                                     </div>
