@@ -1,73 +1,110 @@
-ul#navigation li.external:hover .fa, ul#navigation li.currentmenu .fa{
-	color: #15a1ff;
-}
-.ul-boxed li {
-	border-left-color:#025cd1ad;
-}
-ul.ul-card li .dy .year {
-	background-color: #025cd1ad;
-}
-ul.ul-dates div.dates span {
-	background-color: #025cd1ad;
-}
-ul.timeline li .date {
-	background: #025cd1ad;
-}
-ul.timeline li .data {
-	border-left-color: #025cd1ad;
-}
-.ul-withdetails li .imageoverlay {
-	background: #025cd1ad;
-}
-.cd-active.cd-dropdown > span {
-	color: #025cd1ad;
-}
-.cd-active.cd-dropdown ul li span:hover {
-	background: #025cd1ad;
-}
-.pitems .pubmain .pubassets {
-	border-top-color:#025cd1ad; 
-}
-.pitems .pubmain .pubassets a:hover,.pitems .pubmain .pubassets a:focus,.pitems .pubmain .pubassets a.pubcollapse {
-	background: #025cd1ad;
-}
-.contact-office .icon-huge, .contact-lab .icon-huge {
-	color: #025cd1ad;
+/* ================================================
+   Slate Blue Theme — Calm, Sophisticated, Elegant
+   ================================================ */
+
+:root {
+    --accent:        #4A6FA5;
+    --accent-light:  #7B9CC4;
+    --accent-subtle: rgba(74, 111, 165, 0.08);
+    --accent-hover:  #3A5A8A;
+    --tint:          #7B9CC4;
+
+    --bg-main:       #F9FAFB;
+    --bg-header:     #F1F3F6;
+    --bg-card:       #FFFFFF;
+    --bg-section-1:  #F9FAFB;
+    --bg-section-2:  #F3F5F8;
+
+    --sidebar-bg:    #1A1A1C;
+    --sidebar-nav:   #222224;
+    --sidebar-hover: #2A2A2D;
+    --sidebar-active:#2F2F33;
+
+    --text-primary:  #1F2937;
+    --text-secondary:#6B7280;
+    --text-muted:    #9CA3AF;
+    --border-color:  #E5E7EB;
+    --border-light:  #F0F1F3;
+    --shadow-sm:     0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.02);
+    --shadow-md:     0 4px 16px rgba(0,0,0,0.06);
+    --shadow-lg:     0 8px 30px rgba(0,0,0,0.08);
 }
 
-/* secondary color 
-**************************************************/
+/* Navigation accent */
+ul#navigation li.external:hover .fa,
+ul#navigation li.currentmenu .fa {
+    color: var(--accent-light);
+}
+
+/* Boxed list */
+.ul-boxed li {
+    border-left-color: var(--accent);
+}
+
+/* Card dates */
+ul.ul-card li .dy .year {
+    background-color: var(--accent);
+}
 ul.ul-card li .dy .degree {
-	background-color: #278fd4;
+    background-color: var(--accent-light);
+}
+
+/* Date badges */
+ul.ul-dates div.dates span {
+    background-color: var(--accent);
 }
 ul.ul-dates div.dates span:last-child {
-	/* font-weight: bold; */
-	color: rgb(34, 33, 33);
-	/* background-color:  white; */
-	background-color: #adcee4;
+    color: var(--text-primary);
+    background-color: rgba(123, 156, 196, 0.18);
+}
+
+/* Timeline */
+ul.timeline li .date {
+    background: var(--accent);
+}
+ul.timeline li .data {
+    border-left-color: var(--accent);
 }
 ul.timeline li.open .circle {
-	background-color: #278fd4;
+    background-color: var(--accent-light);
 }
 ul.timeline li.open .data {
-	border-color: #278fd4;
+    border-color: var(--accent-light);
 }
+
+/* Publication details overlay */
+.ul-withdetails li .imageoverlay {
+    background: var(--accent);
+}
+
+/* Dropdown */
+.cd-active.cd-dropdown > span {
+    color: var(--accent);
+}
+.cd-active.cd-dropdown ul li span:hover {
+    background: var(--accent);
+}
+
+/* Publication assets */
+.pitems .pubmain .pubassets {
+    border-top-color: var(--accent);
+}
+.pitems .pubmain .pubassets a:hover,
+.pitems .pubmain .pubassets a:focus,
+.pitems .pubmain .pubassets a.pubcollapse {
+    background: var(--accent);
+}
+
+/* Contact icons */
+.contact-office .icon-huge,
+.contact-lab .icon-huge {
+    color: var(--accent);
+}
+
+/* Lab carousel */
 #labp-heads-wrap {
-	background-color: #278fd4;
+    background-color: var(--accent-light);
 }
-#labp-heads-wrap:after{
-	border-top-color: #278fd4;
+#labp-heads-wrap:after {
+    border-top-color: var(--accent-light);
 }
-
-
-:root{
-	--tint:#278fd4dc;
-}
-
-
-
-
-
-
-
-

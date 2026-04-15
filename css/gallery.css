@@ -1,4 +1,8 @@
-#gallery .pageheader{
+/* ================================================
+   GALLERY — Modern, Clean
+   ================================================ */
+
+#gallery .pageheader {
 	background-image: url(../img/personal/gallery.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -6,13 +10,12 @@
 	padding: 190px 0 70px 0;
 }
 
-#gallery .pageheader h2{
+#gallery .pageheader h2 {
 	color: #f7f7f7;
-	text-align:left;
+	text-align: left;
 }
 
 #gallery-large {
-	_background: #303030;
 	padding-top: 20px;
 }
 
@@ -26,7 +29,7 @@ ul.grid {
 ul.grid li {
 	display: block;
 	float: left;
-	padding: 15px;
+	padding: 8px;
 	width: 30%;
 }
 
@@ -34,21 +37,19 @@ ul.grid li {
 	ul.grid li {
 		width: 50%;
 	}
-
 }
 
 @media screen and (max-width: 400px) {
 	ul.grid li {
 		width: 100%;
 	}
-
 }
 
-ul.grid li >div {
-	-webkit-box-shadow: 0 0 8px -1px #000;
-	box-shadow: 0 0 8px -1px #000;
+ul.grid li > div {
+	box-shadow: 0 4px 20px rgba(0,0,0,0.25);
 	overflow: hidden;
 	position: relative;
+	border-radius: 12px;
 }
 
 ul.grid li .over {
@@ -63,121 +64,98 @@ ul.grid li .over {
 ul.grid li .comein {
 	position: relative;
 	z-index: 1;
-	padding: 15px;
+	padding: 18px;
 	height: 100%;
+}
+
+ul.grid li .comein h4 {
+	font-family: 'DM Sans', sans-serif;
+	font-size: 12px;
+	font-weight: 500;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	opacity: 0.85;
+	margin-bottom: 6px;
+	color: #fff;
+}
+
+ul.grid li .comein p {
+	font-size: 14px;
+	line-height: 1.5;
+	font-family: 'DM Sans', sans-serif;
+	font-weight: 400;
+	color: #fff;
 }
 
 ul.grid li .comein i {
 	display: block;
-	width: 60px;
-	height: 60px;
+	width: 50px;
+	height: 50px;
 	position: absolute;
 	top: 50%;
-	margin-top: -30px;
+	margin-top: -25px;
 	left: 50%;
-	margin-left: -30px;
-	font-size: 22px;
+	margin-left: -25px;
+	font-size: 18px;
 	color: #FFF;
-
-	-webkit-box-shadow: 0 0 60px #fff;
-	box-shadow: 0 0 60px #fff;
-	border: 1px solid #fff;
+	box-shadow: 0 0 40px rgba(255,255,255,0.15);
+	border: 1px solid rgba(255,255,255,0.3);
 	text-align: center;
-	padding-top: 17px;
+	padding-top: 15px;
 	border-radius: 50%;
 }
 
 ul.grid li .comein-bg {
-	-khtml-opacity: .70;
-	-moz-opacity: .70;
-	-ms-filter: â€alpha(opacity=70)â€;
-	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.7);
-	filter: alpha(opacity=70);
-	opacity: .70;
+	opacity: 0.65;
 	position: absolute;
 	top: 0;
 	bottom: 0;
 	right: 0;
 	left: 0;
-	background: #000;
+	background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.1) 100%);
 	z-index: -1;
+	border-radius: 12px;
 }
 
-ul.grid li a,ul.grid li img {
+ul.grid li a, ul.grid li img {
 	outline: none;
 	border: none;
 	display: block;
 	max-width: 100%;
+	border-radius: 12px;
+	transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* at start */
+ul.grid li:hover img {
+	transform: scale(1.06);
+}
+
+/* Magnific popup slide animations */
 .my-mfp-slide-bottom .mfp-content {
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-	filter: alpha(opacity=0);
 	opacity: 0;
-
-	-webkit-transition: all 0.7s ease-out;
-	-moz-transition: all 0.7s ease-out;
-	-o-transition: all 0.7s ease-out;
-	-ms-transition: all 0.7s ease-out;
-	transition: all 0.7s ease-out;
-
-	-webkit-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
-	-moz-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
-	-o-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
-	-ms-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
-	transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+	transition: all 0.5s ease-out;
+	transform: translateY(-15px);
 }
 
-/* animate in */
 .my-mfp-slide-bottom.mfp-ready .mfp-content {
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-	filter: alpha(opacity=100);
 	opacity: 1;
-
-	-webkit-transform: translateY(0) perspective( 600px ) rotateX( 0 );
-	-moz-transform: translateY(0) perspective( 600px ) rotateX( 0 );
-	-o-transform: translateY(0) perspective( 600px ) rotateX( 0 );
-	-ms-transform: translateY(0) perspective( 600px ) rotateX( 0 );
-	transform: translateY(0) perspective( 600px ) rotateX( 0 );
+	transform: translateY(0);
 }
 
-/* animate out */
 .my-mfp-slide-bottom.mfp-removing .mfp-content {
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-	filter: alpha(opacity=0);
 	opacity: 0;
-
-	-webkit-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
-	-moz-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
-	-o-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
-	-ms-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
-	transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
+	transform: translateY(-10px);
 }
 
-/* Dark overlay, start state */
 .my-mfp-slide-bottom.mfp-bg {
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-	filter: alpha(opacity=0);
 	opacity: 0;
-
-	-webkit-transition: opacity 0.3s ease-out;
-	-moz-transition: opacity 0.3s ease-out;
-	-o-transition: opacity 0.3s ease-out;
-	-ms-transition: opacity 0.3s ease-out;
 	transition: opacity 0.3s ease-out;
 }
 
-/* animate in */
 .my-mfp-slide-bottom.mfp-ready.mfp-bg {
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-	filter: alpha(opacity=80);
-	opacity: 0.8;
+	opacity: 0.88;
 }
 
-/* animate out */
 .my-mfp-slide-bottom.mfp-removing.mfp-bg {
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-	filter: alpha(opacity=0);
 	opacity: 0;
 }

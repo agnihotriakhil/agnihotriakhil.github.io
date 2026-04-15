@@ -1,4 +1,37 @@
-
+/*++++++++++++++++++++++++++++++++++++
+	Load shared sidebar & highlight current page
+++++++++++++++++++++++++++++++++++++++*/
+window._sidebarLoaded = false;
+$(function(){
+	$('#sidebar-inner').load('sidebar.html', function(){
+		window._sidebarLoaded = true;
+		// Highlight current page by matching href to current URL
+		var currentFile = window.location.pathname.split('/').pop() || 'index.html';
+		if (currentFile === '' || currentFile.indexOf('.html') === -1) currentFile = 'index.html';
+		// Use setTimeout to ensure DOM is fully updated after .load()
+		// Re-init sidebar JS first, THEN highlight (so init doesn't wipe the class)
+		if (typeof window._doSidebarInit === 'function') window._doSidebarInit();
+		
+		// Apply highlight with both class AND inline styles (belt and suspenders)
+		function highlightCurrent(){
+			$('ul#navigation > li').each(function(){
+				var $link = $(this).find('a');
+				if ($link.length) {
+					var href = $link.attr('href');
+					if (href === currentFile || currentFile.indexOf(href) !== -1 || href.indexOf(currentFile) !== -1) {
+						$(this).addClass('currentmenu');
+						$(this).css({'background': 'rgba(122, 158, 142, 0.2)', 'border-left': '3px solid #7A9E8E'});
+						$link.css({'color': '#fff', 'font-weight': '500'});
+						$(this).find('.fa').css('color', '#7A9E8E');
+					}
+				}
+			});
+		}
+		highlightCurrent();
+		setTimeout(highlightCurrent, 200);
+		setTimeout(highlightCurrent, 500);
+	});
+});
 
 $.fn.exists = function () {
     return this.length > 0 ? this : false;
@@ -44,8 +77,12 @@ $(document).ready(function(){
 		},
 
 		init : function(){
+			// Re-query DOM elements (needed when sidebar is loaded dynamically)
+			this.settings.$sideFooter = $('#sidebar-footer');
+			this.settings.$sideContent = $('#main-nav');
+			this.settings.$totaltrigger = $(".social-icons, #main-nav, #main");
 			sideS = this.settings;
-			sideS.contentPadding=parseInt(sideS.$sideContent.css('padding-bottom'));
+			sideS.contentPadding=parseInt(sideS.$sideContent.css('padding-bottom')) || 0;
 			this.customScrollFlag=false;
 			this.setScrollBar();
 			this.setContentPadding();
@@ -122,7 +159,7 @@ $(document).ready(function(){
 		},
 
 		reset : function(){
-			sideS.$main.css({left:250, right:0});
+			sideS.$main.css({left:260, right:0});
 			sideS.$side.css({left:0});
 			sideS.$main.addClass('sideIn');
 		},
@@ -179,7 +216,12 @@ $(document).ready(function(){
 		}
 
 	}
-	sidebar.init();
+	// Expose sidebar init for dynamic load callback
+	window._doSidebarInit = function(){ sidebar.init(); };
+	// If sidebar already loaded (race condition), init now; otherwise wait for callback
+	if (window._sidebarLoaded) {
+		sidebar.init();
+	}
 
 	/*++++++++++++++++++++++++++++++++++++
 		click event on ul.timeline titles
