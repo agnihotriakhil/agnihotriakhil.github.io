@@ -1,83 +1,115 @@
 /* ================================================
-   Slate Blue Theme — Calm, Sophisticated, Elegant
+   Classic Blue · Burgundy · Gold
+   Blue links, burgundy & gold accents
    ================================================ */
 
 :root {
-    --accent:        #4A6FA5;
-    --accent-light:  #7B9CC4;
-    --accent-subtle: rgba(74, 111, 165, 0.08);
-    --accent-hover:  #3A5A8A;
-    --tint:          #7B9CC4;
+    /* Primary — Vivid Blue (links, text accents) */
+    --accent:          #2D5FA0;
+    --accent-light:    #5A8AC8;
+    --accent-subtle:   rgba(45, 95, 160, 0.08);
+    --accent-hover:    #1E4D88;
 
-    --bg-main:       #F9FAFB;
-    --bg-header:     #F1F3F6;
-    --bg-card:       #FFFFFF;
-    --bg-section-1:  #F9FAFB;
-    --bg-section-2:  #F3F5F8;
+    /* Secondary — Deep Burgundy (badges, dates, overlays) */
+    --burgundy:        #760705;
+    --burgundy-light:  #A03030;
+    --burgundy-subtle: rgba(118, 7, 5, 0.08);
 
-    --sidebar-bg:    #1A1A1C;
-    --sidebar-nav:   #222224;
-    --sidebar-hover: #2A2A2D;
-    --sidebar-active:#2F2F33;
+    /* Tertiary — Rich Gold (highlights, borders) */
+    --gold:            #C49A2A;
+    --gold-light:      #DEBA5A;
+    --gold-subtle:     rgba(196, 154, 42, 0.10);
 
-    --text-primary:  #1F2937;
-    --text-secondary:#6B7280;
-    --text-muted:    #9CA3AF;
-    --border-color:  #E5E7EB;
-    --border-light:  #F0F1F3;
-    --shadow-sm:     0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.02);
-    --shadow-md:     0 4px 16px rgba(0,0,0,0.06);
-    --shadow-lg:     0 8px 30px rgba(0,0,0,0.08);
+    /* Soft Teal — for date badges, harmonizes with blue */
+    --badge:           #1A73B5;
+    --badge-light:     #3d95d4dc;
+
+    --tint:            #7B9CC4;
+    --teal-light:      #7B9CC4;
+
+    --bg-main:         #FDFDFF;
+    --bg-header:       #F7F7FB;
+    --bg-card:         #FFFFFF;
+    --bg-section-1:    #FAFBFD;
+    --bg-section-2:    #F3F4F8;
+
+    --sidebar-bg:      #1A1A1C;
+    --sidebar-nav:     #222224;
+    --sidebar-hover:   #2A2A2D;
+    --sidebar-active:  #2F2F33;
+
+    --text-primary:    #1F2937;
+    --text-secondary:  #6B7280;
+    --text-muted:      #9CA3AF;
+    --border-color:    #E5E7EB;
+    --border-light:    #F0F1F3;
+    --shadow-sm:       0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.02);
+    --shadow-md:       0 4px 16px rgba(0,0,0,0.06);
+    --shadow-lg:       0 8px 30px rgba(0,0,0,0.08);
 }
 
-/* Navigation accent */
+/* ================================================
+   SIDEBAR — Blue accents for nav icons
+   ================================================ */
 ul#navigation li.external:hover .fa,
 ul#navigation li.currentmenu .fa {
     color: var(--accent-light);
 }
 
-/* Boxed list */
+/* ================================================
+   BOXED LISTS — Gold left border
+   ================================================ */
 .ul-boxed li {
-    border-left-color: var(--accent);
+    border-left-color: var(--gold);
 }
 
-/* Card dates */
+/* ================================================
+   CARDS — Burgundy year badge, Gold degree badge
+   ================================================ */
 ul.ul-card li .dy .year {
-    background-color: var(--accent);
+    background-color: var(--burgundy);
 }
 ul.ul-card li .dy .degree {
-    background-color: var(--accent-light);
+    background-color: var(--gold);
 }
 
-/* Date badges */
+/* ================================================
+   DATE BADGES — Burgundy primary, Gold subtle secondary
+   ================================================ */
 ul.ul-dates div.dates span {
-    background-color: var(--accent);
+    background-color: var(--badge);
 }
 ul.ul-dates div.dates span:last-child {
-    color: var(--text-primary);
-    background-color: rgba(123, 156, 196, 0.18);
+    color: #fff;
+    background-color: var(--badge-light);
 }
 
-/* Timeline */
+/* ================================================
+   TIMELINE — Burgundy dates, Blue border, Gold circles
+   ================================================ */
 ul.timeline li .date {
-    background: var(--accent);
+    background: var(--burgundy);
 }
 ul.timeline li .data {
     border-left-color: var(--accent);
 }
 ul.timeline li.open .circle {
-    background-color: var(--accent-light);
+    background-color: var(--gold);
 }
 ul.timeline li.open .data {
     border-color: var(--accent-light);
 }
 
-/* Publication details overlay */
+/* ================================================
+   PUBLICATIONS — Burgundy overlay
+   ================================================ */
 .ul-withdetails li .imageoverlay {
-    background: var(--accent);
+    background: var(--burgundy);
 }
 
-/* Dropdown */
+/* ================================================
+   DROPDOWNS — Blue active state
+   ================================================ */
 .cd-active.cd-dropdown > span {
     color: var(--accent);
 }
@@ -85,26 +117,40 @@ ul.timeline li.open .data {
     background: var(--accent);
 }
 
-/* Publication assets */
+/* ================================================
+   PUBLICATION ASSETS — Gold bar, Burgundy hover
+   ================================================ */
 .pitems .pubmain .pubassets {
-    border-top-color: var(--accent);
+    border-top-color: var(--gold);
 }
 .pitems .pubmain .pubassets a:hover,
 .pitems .pubmain .pubassets a:focus,
 .pitems .pubmain .pubassets a.pubcollapse {
-    background: var(--accent);
+    background: var(--burgundy);
 }
 
-/* Contact icons */
+/* ================================================
+   CONTACT — Burgundy icons
+   ================================================ */
 .contact-office .icon-huge,
 .contact-lab .icon-huge {
-    color: var(--accent);
+    color: var(--burgundy);
 }
 
-/* Lab carousel */
+/* ================================================
+   LAB CAROUSEL — Gold background
+   ================================================ */
 #labp-heads-wrap {
-    background-color: var(--accent-light);
+    background-color: var(--gold);
 }
 #labp-heads-wrap:after {
-    border-top-color: var(--accent-light);
+    border-top-color: var(--gold);
+}
+
+/* ================================================
+   EXPERIENCE CARDS — Burgundy year badges
+   ================================================ */
+ul.ul-exp li .dy-exp .year-exp {
+    background-color: var(--burgundy);
+    border-radius: 4px;
 }
